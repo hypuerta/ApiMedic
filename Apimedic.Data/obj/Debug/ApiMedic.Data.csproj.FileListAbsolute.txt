@@ -1,0 +1,14 @@
+C:\Users\hpuerta\documents\visual studio 2017\Projects\ApiMedic\Apimedic.Data\bin\Debug\ApiMedic.Data.dll.config
+C:\Users\hpuerta\documents\visual studio 2017\Projects\ApiMedic\Apimedic.Data\bin\Debug\ApiMedic.Data.dll
+C:\Users\hpuerta\documents\visual studio 2017\Projects\ApiMedic\Apimedic.Data\bin\Debug\ApiMedic.Data.pdb
+C:\Users\hpuerta\documents\visual studio 2017\Projects\ApiMedic\Apimedic.Data\bin\Debug\ApiMedic.Entities.dll
+C:\Users\hpuerta\documents\visual studio 2017\Projects\ApiMedic\Apimedic.Data\bin\Debug\EntityFramework.dll
+C:\Users\hpuerta\documents\visual studio 2017\Projects\ApiMedic\Apimedic.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hpuerta\documents\visual studio 2017\Projects\ApiMedic\Apimedic.Data\bin\Debug\Newtonsoft.Json.dll
+C:\Users\hpuerta\documents\visual studio 2017\Projects\ApiMedic\Apimedic.Data\bin\Debug\ApiMedic.Entities.pdb
+C:\Users\hpuerta\documents\visual studio 2017\Projects\ApiMedic\Apimedic.Data\bin\Debug\EntityFramework.xml
+C:\Users\hpuerta\documents\visual studio 2017\Projects\ApiMedic\Apimedic.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hpuerta\documents\visual studio 2017\Projects\ApiMedic\Apimedic.Data\bin\Debug\Newtonsoft.Json.xml
+C:\Users\hpuerta\documents\visual studio 2017\Projects\ApiMedic\Apimedic.Data\obj\Debug\ApiMedic.Data.csprojResolveAssemblyReference.cache
+C:\Users\hpuerta\documents\visual studio 2017\Projects\ApiMedic\Apimedic.Data\obj\Debug\ApiMedic.Data.dll
+C:\Users\hpuerta\documents\visual studio 2017\Projects\ApiMedic\Apimedic.Data\obj\Debug\ApiMedic.Data.pdb

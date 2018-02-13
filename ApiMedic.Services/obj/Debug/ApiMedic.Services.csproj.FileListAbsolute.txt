@@ -1,0 +1,4 @@
+c:\users\hpuerta\documents\visual studio 2017\Projects\ApiMedic\ApiMedic.Services\bin\Debug\ApiMedic.Services.dll
+c:\users\hpuerta\documents\visual studio 2017\Projects\ApiMedic\ApiMedic.Services\bin\Debug\ApiMedic.Services.pdb
+c:\users\hpuerta\documents\visual studio 2017\Projects\ApiMedic\ApiMedic.Services\obj\Debug\ApiMedic.Services.dll
+c:\users\hpuerta\documents\visual studio 2017\Projects\ApiMedic\ApiMedic.Services\obj\Debug\ApiMedic.Services.pdb

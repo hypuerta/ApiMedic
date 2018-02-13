@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiMedic.Api", "ApiMedic.Api\ApiMedic.Api.csproj", "{CA31C0B0-76C1-4570-90CD-709594550ECA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiMedic.UnitTests", "ApiMedic.UnitTests\ApiMedic.UnitTests.csproj", "{ACA2C8B3-4A5F-44B8-BE85-86F2E3E2F165}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiMedic.BusinessLogic", "ApiMedic.Services\ApiMedic.BusinessLogic.csproj", "{BF1EED05-F1A7-4F3D-A8D7-8505198DD198}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiMedic.Entities", "ApiMedic.Entities\ApiMedic.Entities.csproj", "{B5C81E7B-AAD0-4E83-91F9-F70BAD290AD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiMedic.Data", "Apimedic.Data\ApiMedic.Data.csproj", "{CFA9EB8A-FEB0-43B8-9B17-4E1042487B41}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA31C0B0-76C1-4570-90CD-709594550ECA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA31C0B0-76C1-4570-90CD-709594550ECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA31C0B0-76C1-4570-90CD-709594550ECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA31C0B0-76C1-4570-90CD-709594550ECA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACA2C8B3-4A5F-44B8-BE85-86F2E3E2F165}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACA2C8B3-4A5F-44B8-BE85-86F2E3E2F165}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACA2C8B3-4A5F-44B8-BE85-86F2E3E2F165}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACA2C8B3-4A5F-44B8-BE85-86F2E3E2F165}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF1EED05-F1A7-4F3D-A8D7-8505198DD198}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF1EED05-F1A7-4F3D-A8D7-8505198DD198}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF1EED05-F1A7-4F3D-A8D7-8505198DD198}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF1EED05-F1A7-4F3D-A8D7-8505198DD198}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5C81E7B-AAD0-4E83-91F9-F70BAD290AD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5C81E7B-AAD0-4E83-91F9-F70BAD290AD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5C81E7B-AAD0-4E83-91F9-F70BAD290AD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5C81E7B-AAD0-4E83-91F9-F70BAD290AD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFA9EB8A-FEB0-43B8-9B17-4E1042487B41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFA9EB8A-FEB0-43B8-9B17-4E1042487B41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFA9EB8A-FEB0-43B8-9B17-4E1042487B41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFA9EB8A-FEB0-43B8-9B17-4E1042487B41}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
