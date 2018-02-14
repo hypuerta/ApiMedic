@@ -1,4 +1,13 @@
-﻿namespace ApiMedic.UnitTests.AppointmentBusiness
+﻿// -------------------------------------------------------------------------------
+// <copyright file="DoctorBusinessGetAssignedTimeByDoctorTest.cs" company="ApiMedic.Api">
+// ApiMedic.Api
+// </copyright>
+// <author>Herley Puerta</author>
+// <email>hypuerta@hotmail.com</email>
+// <date>13/02/2018</date>
+// <summary>Test Class DoctorBusinessGetAssignedTimeByDoctorTest.</summary>
+// -------------------------------------------------------------------------------
+namespace ApiMedic.UnitTests.AppointmentBusiness
 {
     using System;
     using System.Collections.Generic;
@@ -10,14 +19,35 @@
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Moq;
 
+    /// <summary>
+    /// Test Class DoctorBusinessGetAssignedTimeByDoctorTest.
+    /// </summary>
     [TestClass]
     public class DoctorBusinessGetAssignedTimeByDoctorTest
     {
+        /// <summary>
+        /// Adapter doctor.
+        /// </summary>
         private Mock<IDoctorAdapter> doctorAdapter = null;
+
+        /// <summary>
+        /// adapter patient.
+        /// </summary>
         private Mock<IPatientAdapter> patientAdapter = null;
+
+        /// <summary>
+        /// Repository appointment.
+        /// </summary>
         private Mock<IAppointmentRepository> appointmentRepository = null;
+
+        /// <summary>
+        /// Business doctor.
+        /// </summary>
         private IDoctorBusiness doctorBusiness = null;
 
+        /// <summary>
+        /// Initialize values to tests.
+        /// </summary>
         [TestInitialize]
         public void InitializeTest()
         {
@@ -30,6 +60,9 @@
                 this.appointmentRepository.Object);
         }
 
+        /// <summary>
+        /// Test get assigned times by doctor when error format date.
+        /// </summary>
         [ExpectedException(typeof(AggregateException))]
         [TestMethod]
         public void GetAssignedTimeByDoctorErrorFormatDate()
@@ -38,6 +71,9 @@
             Assert.AreEqual(null, result);
         }
 
+        /// <summary>
+        /// Test get assigned times by doctor when doctor has not appointments.
+        /// </summary>
         [TestMethod]
         public void GetAssignedTimeByDoctorWithoutAppointments()
         {
@@ -47,6 +83,9 @@
             Assert.AreEqual(0, result.Count);
         }
 
+        /// <summary>
+        /// Test get assigned times when doctor has appointments.
+        /// </summary>
         [TestMethod]
         public void GetAssignedTimeByDoctorWithAppointments()
         {

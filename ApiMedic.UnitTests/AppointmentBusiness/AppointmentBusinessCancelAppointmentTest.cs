@@ -1,4 +1,13 @@
-﻿namespace ApiMedic.UnitTests.AppointmentBusiness
+﻿// -------------------------------------------------------------------------------
+// <copyright file="AppointmentBusinessCancelAppointmentTest.cs" company="ApiMedic.Api">
+// ApiMedic.Api
+// </copyright>
+// <author>Herley Puerta</author>
+// <email>hypuerta@hotmail.com</email>
+// <date>13/02/2018</date>
+// <summary>Test Class AppointmentBusinessCancelAppointmentTest.</summary>
+// -------------------------------------------------------------------------------
+namespace ApiMedic.UnitTests.AppointmentBusiness
 {
     using System;
     using BusinessLogic.Classes;
@@ -8,14 +17,35 @@
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Moq;
 
+    /// <summary>
+    /// Test Class AppointmentBusinessCancelAppointmentTest.
+    /// </summary>
     [TestClass]
     public class AppointmentBusinessCancelAppointmentTest
     {
+        /// <summary>
+        /// Repository appointment.
+        /// </summary>
         private Mock<IAppointmentRepository> appointmentRepository = null;
+
+        /// <summary>
+        /// Adapter doctor.
+        /// </summary>
         private Mock<IDoctorAdapter> doctorAdapter = null;
+
+        /// <summary>
+        /// Adapter patient.
+        /// </summary>
         private Mock<IPatientAdapter> patientAdapter = null;
+
+        /// <summary>
+        /// Business apointment.
+        /// </summary>
         private IAppointmentBusiness appointmentBusiness = null;
 
+        /// <summary>
+        /// Initialize values to test.
+        /// </summary>
         [TestInitialize]
         public void InitializeTest()
         {
@@ -28,6 +58,9 @@
                 this.patientAdapter.Object);
         }
 
+        /// <summary>
+        /// Test cancel appointment when appointment does not exists.
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(AggregateException))]
         public void CancelAppointmentDoesNotExists()
@@ -38,6 +71,9 @@
             Assert.AreEqual(0, result);
         }
 
+        /// <summary>
+        /// Test cancel appointment when repository returns error.
+        /// </summary>
         [TestMethod]
         public void CancelAppointmentError()
         {
@@ -48,6 +84,9 @@
             Assert.AreEqual(0, result);
         }
 
+        /// <summary>
+        /// Test cancel appointment success.
+        /// </summary>
         [TestMethod]
         public void CancelAppointmentSuccess() 
         {

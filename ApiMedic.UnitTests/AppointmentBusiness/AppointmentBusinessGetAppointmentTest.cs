@@ -1,4 +1,13 @@
-﻿namespace ApiMedic.UnitTests.AppointmentBusiness
+﻿// -------------------------------------------------------------------------------
+// <copyright file="AppointmentBusinessGetAppointmentTest.cs" company="ApiMedic.Api">
+// ApiMedic.Api
+// </copyright>
+// <author>Herley Puerta</author>
+// <email>hypuerta@hotmail.com</email>
+// <date>13/02/2018</date>
+// <summary>Test Class AppointmentBusinessGetAppointmentTest.</summary>
+// -------------------------------------------------------------------------------
+namespace ApiMedic.UnitTests.AppointmentBusiness
 {
     using BusinessLogic.Classes;
     using BusinessLogic.Interfaces;
@@ -7,14 +16,35 @@
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Moq;
 
+    /// <summary>
+    /// Test Class AppointmentBusinessGetAppointmentTest.
+    /// </summary>
     [TestClass]
     public class AppointmentBusinessGetAppointmentTest
     {
+        /// <summary>
+        /// Repository appointment.
+        /// </summary>
         private Mock<IAppointmentRepository> appointmentRepository = null;
+
+        /// <summary>
+        /// Adapter doctor.
+        /// </summary>
         private Mock<IDoctorAdapter> doctorAdapter = null;
+
+        /// <summary>
+        /// Adapter patient.
+        /// </summary>
         private Mock<IPatientAdapter> patientAdapter = null;
+
+        /// <summary>
+        /// Business appointment.
+        /// </summary>
         private IAppointmentBusiness appointmentBusiness = null;
 
+        /// <summary>
+        /// Initialize values to tests.
+        /// </summary>
         [TestInitialize]
         public void InitializeTest()
         {
@@ -27,6 +57,9 @@
                 this.patientAdapter.Object);
         }
 
+        /// <summary>
+        /// Test get appointment when repository returns null.
+        /// </summary>
         [TestMethod]
         public void GetAppointmentRepositoryReturnsNull()
         {
@@ -36,6 +69,9 @@
             Assert.AreEqual(null, result);
         }
 
+        /// <summary>
+        /// Test get appointment success.
+        /// </summary>
         [TestMethod]
         public void GetAppointmentSuccess()
         {

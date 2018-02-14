@@ -53,10 +53,16 @@
   <ItemGroup>
     <Compile Include="Context\ApiMedicDB.cs" />
     <Compile Include="ExternalAgents\AdapterBase.cs" />
-    <Compile Include="ExternalAgents\DoctorAdapter.cs" />
+    <Compile Include="ExternalAgents\DoctorAdapter.cs">
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+    </Compile>
     <Compile Include="ExternalAgents\PatientAdapter.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\AppointmentRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="Repositories\AppointmentRepository.cs">
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+    </Compile>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

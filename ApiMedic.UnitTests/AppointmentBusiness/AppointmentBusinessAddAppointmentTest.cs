@@ -1,4 +1,13 @@
-﻿namespace ApiMedic.UnitTests.AppointmentBusiness
+﻿// -------------------------------------------------------------------------------
+// <copyright file="AppointmentBusinessAddAppointmentTest.cs" company="ApiMedic.Api">
+// ApiMedic.Api
+// </copyright>
+// <author>Herley Puerta</author>
+// <email>hypuerta@hotmail.com</email>
+// <date>13/02/2018</date>
+// <summary>Test Class AppointmentBusinessAddAppointmentTest.</summary>
+// -------------------------------------------------------------------------------
+namespace ApiMedic.UnitTests.AppointmentBusiness
 {
     using System;
     using System.Collections.Generic;
@@ -9,15 +18,35 @@
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Moq;
 
+    /// <summary>
+    /// Test Class AppointmentBusinessAddAppointmentTest.
+    /// </summary>
     [TestClass]
     public class AppointmentBusinessAddAppointmentTest
     {
+        /// <summary>
+        /// Repository appointment.
+        /// </summary>
         private Mock<IAppointmentRepository> appointmentRepository = null;
+
+        /// <summary>
+        /// Adapter doctor.
+        /// </summary>
         private Mock<IDoctorAdapter> doctorAdapter = null;
+
+        /// <summary>
+        /// Adapter patient.
+        /// </summary>
         private Mock<IPatientAdapter> patientAdapter = null;
 
+        /// <summary>
+        /// Appointmet business.
+        /// </summary>
         private IAppointmentBusiness appointmentBusiness = null;
 
+        /// <summary>
+        /// Initialize values to test.
+        /// </summary>
         [TestInitialize]
         public void InitializeTest()
         {
@@ -30,6 +59,9 @@
                 this.patientAdapter.Object);
         }
 
+        /// <summary>
+        /// Test Add appointment null.
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(AggregateException))]
         public void AddAppointmentNull()
@@ -39,6 +71,9 @@
             Assert.Equals(0, result);
         }
 
+        /// <summary>
+        /// Test add appointment when doctor does not exists.
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(AggregateException))]
         public void AddAppointmentDoctorDoesNotExists()
@@ -50,6 +85,9 @@
             Assert.AreEqual(0, result);
         }
 
+        /// <summary>
+        /// Test add appointmnet when patient does not exists.
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(AggregateException))]
         public void AddAppointmentPatientDoesNotExists()
@@ -62,6 +100,9 @@
             Assert.AreEqual(0, result);
         }
 
+        /// <summary>
+        /// Test add appoinment when repository returns error.
+        /// </summary>
         [TestMethod]
         public void AddAppointmentError()
         {
@@ -77,6 +118,9 @@
             Assert.AreEqual(0, result);
         }
 
+        /// <summary>
+        /// Test add appointment when doctor has appointmnent in same date.
+        /// </summary>
         [ExpectedException(typeof(AggregateException))]
         [TestMethod]
         public void AddAppointmentDoctorHasAppointmentSameDate()
@@ -97,6 +141,9 @@
             Assert.AreEqual(0, result);
         }
 
+        /// <summary>
+        /// Test add appointment success.
+        /// </summary>
         [TestMethod]
         public void AddAppointmentSuccess() 
         {

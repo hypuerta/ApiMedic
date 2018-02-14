@@ -1,4 +1,13 @@
-﻿namespace ApiMedic.UnitTests.AppointmentBusiness
+﻿// -------------------------------------------------------------------------------
+// <copyright file="AppointmentBusinessUpdateAppointmentTest.cs" company="ApiMedic.Api">
+// ApiMedic.Api
+// </copyright>
+// <author>Herley Puerta</author>
+// <email>hypuerta@hotmail.com</email>
+// <date>13/02/2018</date>
+// <summary>Test Class AppointmentBusinessUpdateAppointmentTest.</summary>
+// -------------------------------------------------------------------------------
+namespace ApiMedic.UnitTests.AppointmentBusiness
 {
     using System;
     using BusinessLogic.Classes;
@@ -8,15 +17,35 @@
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Moq;
 
+    /// <summary>
+    /// Test Class AppointmentBusinessUpdateAppointmentTest.
+    /// </summary>
     [TestClass]
     public class AppointmentBusinessUpdateAppointmentTest
     {
+        /// <summary>
+        /// Repository appointment.
+        /// </summary>
         private Mock<IAppointmentRepository> appointmentRepository = null;
+
+        /// <summary>
+        /// Adapter doctor.
+        /// </summary>
         private Mock<IDoctorAdapter> doctorAdapter = null;
+
+        /// <summary>
+        /// Adapter patient.
+        /// </summary>
         private Mock<IPatientAdapter> patientAdapter = null;
 
+        /// <summary>
+        /// Business appointment.
+        /// </summary>
         private IAppointmentBusiness appointmentBusiness = null;
 
+        /// <summary>
+        /// Initialize values to tests.
+        /// </summary>
         [TestInitialize]
         public void InitializeTest()
         {
@@ -29,6 +58,9 @@
                 this.patientAdapter.Object);
         }
 
+        /// <summary>
+        /// Test update appointment null.
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(AggregateException))]
         public void UpdateAppointmentNull()
@@ -38,6 +70,9 @@
             Assert.Equals(0, result);
         }
 
+        /// <summary>
+        /// Test update appointment that does not exists.
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(AggregateException))]
         public void UpdateAppointmentDoesNotExists()
@@ -49,6 +84,9 @@
             Assert.AreEqual(0, result);
         }
 
+        /// <summary>
+        /// Test update appointment when doctor does not exists.
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(AggregateException))]
         public void UpdateAppointmentDoctorDoesNotExists()
@@ -60,6 +98,9 @@
             Assert.AreEqual(0, result);
         }
 
+        /// <summary>
+        /// Test update appointment when patient does not exists.
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(AggregateException))]
         public void UpdateAppointmentPatientDoesNotExists()
@@ -72,6 +113,9 @@
             Assert.AreEqual(0, result);
         }
 
+        /// <summary>
+        /// Test update appointment when repository returns error.
+        /// </summary>
         [TestMethod]
         public void UpdateAppointmentError()
         {
@@ -86,6 +130,9 @@
             Assert.AreEqual(0, result);
         }
 
+        /// <summary>
+        /// Test update appointment success.
+        /// </summary>
         [TestMethod]
         public void UpdateAppointmentSuccess() 
         {

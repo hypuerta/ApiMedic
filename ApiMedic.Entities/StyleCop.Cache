@@ -1,13 +1,10 @@
 <stylecopresultscache>
   <version>12</version>
-  <project key="-1610201398">
-    <configuration>DEBUG;TRACE</configuration>
-  </project>
   <sourcecode name="AssemblyInfo.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2017-10-04 13:47:56.957</styleCop>
       <settingsFile>2017-10-04 13:47:56.928</settingsFile>
-      <sourceFile>2018-02-12 11:43:32.346</sourceFile>
+      <sourceFile>2018-02-12 11:45:00.686</sourceFile>
       <parser>2017-10-04 13:47:56.957</parser>
       <StyleCop.CSharp.DocumentationRules>2017-10-04 13:47:56.957</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -32,14 +29,14 @@
       </violation>
     </violations>
   </sourcecode>
-  <project key="1806711780">
+  <project key="1739038409">
     <configuration>DEBUG;TRACE</configuration>
   </project>
-  <sourcecode name="AppointmentBusiness.cs" parser="StyleCop.CSharp.CsParser">
+  <sourcecode name="IAppointmentRepository.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2017-10-04 13:47:56.957</styleCop>
       <settingsFile>2017-10-04 13:47:56.928</settingsFile>
-      <sourceFile>2018-02-14 11:25:52.118</sourceFile>
+      <sourceFile>2018-02-14 11:35:23.104</sourceFile>
       <parser>2017-10-04 13:47:56.957</parser>
       <StyleCop.CSharp.DocumentationRules>2017-10-04 13:47:56.957</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -58,11 +55,11 @@
     </timestamps>
     <violations />
   </sourcecode>
-  <sourcecode name="DoctorBusiness.cs" parser="StyleCop.CSharp.CsParser">
+  <sourcecode name="IDoctorAdapter.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2017-10-04 13:47:56.957</styleCop>
       <settingsFile>2017-10-04 13:47:56.928</settingsFile>
-      <sourceFile>2018-02-14 11:28:00.776</sourceFile>
+      <sourceFile>2018-02-14 11:35:43.105</sourceFile>
       <parser>2017-10-04 13:47:56.957</parser>
       <StyleCop.CSharp.DocumentationRules>2017-10-04 13:47:56.957</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -81,11 +78,11 @@
     </timestamps>
     <violations />
   </sourcecode>
-  <sourcecode name="IAppointmentBusiness.cs" parser="StyleCop.CSharp.CsParser">
+  <sourcecode name="IPatientAdapter.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2017-10-04 13:47:56.957</styleCop>
       <settingsFile>2017-10-04 13:47:56.928</settingsFile>
-      <sourceFile>2018-02-14 11:27:44.765</sourceFile>
+      <sourceFile>2018-02-14 11:36:21.499</sourceFile>
       <parser>2017-10-04 13:47:56.957</parser>
       <StyleCop.CSharp.DocumentationRules>2017-10-04 13:47:56.957</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -104,11 +101,109 @@
     </timestamps>
     <violations />
   </sourcecode>
-  <sourcecode name="IDoctorBusiness.cs" parser="StyleCop.CSharp.CsParser">
+  <sourcecode name="Appointment.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2017-10-04 13:47:56.957</styleCop>
       <settingsFile>2017-10-04 13:47:56.928</settingsFile>
-      <sourceFile>2018-02-14 11:27:15.001</sourceFile>
+      <sourceFile>2018-02-14 11:58:17.666</sourceFile>
+      <parser>2017-10-04 13:47:56.957</parser>
+      <StyleCop.CSharp.DocumentationRules>2017-10-04 13:47:56.957</StyleCop.CSharp.DocumentationRules>
+      <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
+      <StyleCop.CSharp.LayoutRules>2017-10-04 13:47:56.957</StyleCop.CSharp.LayoutRules>
+      <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
+      <StyleCop.CSharp.MaintainabilityRules>2017-10-04 13:47:56.957</StyleCop.CSharp.MaintainabilityRules>
+      <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
+      <StyleCop.CSharp.NamingRules>2017-10-04 13:47:56.957</StyleCop.CSharp.NamingRules>
+      <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
+      <StyleCop.CSharp.OrderingRules>2017-10-04 13:47:56.957</StyleCop.CSharp.OrderingRules>
+      <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
+      <StyleCop.CSharp.ReadabilityRules>2017-10-04 13:47:56.957</StyleCop.CSharp.ReadabilityRules>
+      <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
+      <StyleCop.CSharp.SpacingRules>2017-10-04 13:47:56.957</StyleCop.CSharp.SpacingRules>
+      <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
+    </timestamps>
+    <violations>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PropertySummaryDocumentationMustMatchAccessors" ruleCheckId="SA1623">
+        <context>The property's documentation summary text must begin with: Gets or sets a value indicating whether</context>
+        <line>41</line>
+        <warning>False</warning>
+      </violation>
+    </violations>
+  </sourcecode>
+  <sourcecode name="Doctor.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2017-10-04 13:47:56.957</styleCop>
+      <settingsFile>2017-10-04 13:47:56.928</settingsFile>
+      <sourceFile>2018-02-14 11:41:42.618</sourceFile>
+      <parser>2017-10-04 13:47:56.957</parser>
+      <StyleCop.CSharp.DocumentationRules>2017-10-04 13:47:56.957</StyleCop.CSharp.DocumentationRules>
+      <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
+      <StyleCop.CSharp.LayoutRules>2017-10-04 13:47:56.957</StyleCop.CSharp.LayoutRules>
+      <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
+      <StyleCop.CSharp.MaintainabilityRules>2017-10-04 13:47:56.957</StyleCop.CSharp.MaintainabilityRules>
+      <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
+      <StyleCop.CSharp.NamingRules>2017-10-04 13:47:56.957</StyleCop.CSharp.NamingRules>
+      <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
+      <StyleCop.CSharp.OrderingRules>2017-10-04 13:47:56.957</StyleCop.CSharp.OrderingRules>
+      <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
+      <StyleCop.CSharp.ReadabilityRules>2017-10-04 13:47:56.957</StyleCop.CSharp.ReadabilityRules>
+      <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
+      <StyleCop.CSharp.SpacingRules>2017-10-04 13:47:56.957</StyleCop.CSharp.SpacingRules>
+      <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
+    </timestamps>
+    <violations />
+  </sourcecode>
+  <sourcecode name="Patient.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2017-10-04 13:47:56.957</styleCop>
+      <settingsFile>2017-10-04 13:47:56.928</settingsFile>
+      <sourceFile>2018-02-14 11:43:49.809</sourceFile>
+      <parser>2017-10-04 13:47:56.957</parser>
+      <StyleCop.CSharp.DocumentationRules>2017-10-04 13:47:56.957</StyleCop.CSharp.DocumentationRules>
+      <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
+      <StyleCop.CSharp.LayoutRules>2017-10-04 13:47:56.957</StyleCop.CSharp.LayoutRules>
+      <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
+      <StyleCop.CSharp.MaintainabilityRules>2017-10-04 13:47:56.957</StyleCop.CSharp.MaintainabilityRules>
+      <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
+      <StyleCop.CSharp.NamingRules>2017-10-04 13:47:56.957</StyleCop.CSharp.NamingRules>
+      <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
+      <StyleCop.CSharp.OrderingRules>2017-10-04 13:47:56.957</StyleCop.CSharp.OrderingRules>
+      <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
+      <StyleCop.CSharp.ReadabilityRules>2017-10-04 13:47:56.957</StyleCop.CSharp.ReadabilityRules>
+      <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
+      <StyleCop.CSharp.SpacingRules>2017-10-04 13:47:56.957</StyleCop.CSharp.SpacingRules>
+      <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
+    </timestamps>
+    <violations />
+  </sourcecode>
+  <sourcecode name="Specialty.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2017-10-04 13:47:56.957</styleCop>
+      <settingsFile>2017-10-04 13:47:56.928</settingsFile>
+      <sourceFile>2018-02-14 11:44:59.793</sourceFile>
+      <parser>2017-10-04 13:47:56.957</parser>
+      <StyleCop.CSharp.DocumentationRules>2017-10-04 13:47:56.957</StyleCop.CSharp.DocumentationRules>
+      <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
+      <StyleCop.CSharp.LayoutRules>2017-10-04 13:47:56.957</StyleCop.CSharp.LayoutRules>
+      <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
+      <StyleCop.CSharp.MaintainabilityRules>2017-10-04 13:47:56.957</StyleCop.CSharp.MaintainabilityRules>
+      <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
+      <StyleCop.CSharp.NamingRules>2017-10-04 13:47:56.957</StyleCop.CSharp.NamingRules>
+      <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
+      <StyleCop.CSharp.OrderingRules>2017-10-04 13:47:56.957</StyleCop.CSharp.OrderingRules>
+      <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
+      <StyleCop.CSharp.ReadabilityRules>2017-10-04 13:47:56.957</StyleCop.CSharp.ReadabilityRules>
+      <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
+      <StyleCop.CSharp.SpacingRules>2017-10-04 13:47:56.957</StyleCop.CSharp.SpacingRules>
+      <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
+    </timestamps>
+    <violations />
+  </sourcecode>
+  <sourcecode name="ResponseAppointmentsByDoctor.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2017-10-04 13:47:56.957</styleCop>
+      <settingsFile>2017-10-04 13:47:56.928</settingsFile>
+      <sourceFile>2018-02-14 11:46:14.485</sourceFile>
       <parser>2017-10-04 13:47:56.957</parser>
       <StyleCop.CSharp.DocumentationRules>2017-10-04 13:47:56.957</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>

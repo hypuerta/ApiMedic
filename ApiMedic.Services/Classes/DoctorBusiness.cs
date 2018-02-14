@@ -1,4 +1,13 @@
-﻿namespace ApiMedic.BusinessLogic.Classes
+﻿// -------------------------------------------------------------------------------
+// <copyright file="DoctorBusiness.cs" company="ApiMedic.Api">
+// ApiMedic.Api
+// </copyright>
+// <author>Herley Puerta</author>
+// <email>hypuerta@hotmail.com</email>
+// <date>14/02/2018</date>
+// <summary>Implements Doctor Business.</summary>
+// -------------------------------------------------------------------------------
+namespace ApiMedic.BusinessLogic.Classes
 {
     using System;
     using System.Collections.Generic;
@@ -12,12 +21,29 @@
     using Utilities.Exceptions;
     using Utilities.Resources;
 
+    /// <summary>
+    /// Implements Doctor Business.
+    /// </summary>
     public class DoctorBusiness : IDoctorBusiness
     {
+        /// <summary>
+        /// Doctor adapter.
+        /// </summary>
         private readonly IDoctorAdapter doctorAdapter = null;
+
+        /// <summary>
+        /// Patient adapter.
+        /// </summary>
         private readonly IPatientAdapter patientAdapter = null;
+
+        /// <summary>
+        /// Appointment repository.
+        /// </summary>
         private readonly IAppointmentRepository appointmentRepository = null;
 
+        /// <summary>
+        /// Initializes a new instance of the DoctorBusiness class.
+        /// </summary>
         public DoctorBusiness()
         {
             this.doctorAdapter = new DoctorAdapter();
@@ -25,6 +51,12 @@
             this.appointmentRepository = new AppointmentRepository();
         }
 
+        /// <summary>
+        /// Initializes a new instance of the DoctorBusiness class.
+        /// </summary>
+        /// <param name="doctorAdapter">Adapter doctor.</param>
+        /// <param name="patientAdapter">Adapter patient.</param>
+        /// <param name="appointmentRepository">Repository appointment.</param>
         public DoctorBusiness(IDoctorAdapter doctorAdapter, IPatientAdapter patientAdapter, IAppointmentRepository appointmentRepository)
         {
             this.doctorAdapter = doctorAdapter;
@@ -32,6 +64,12 @@
             this.appointmentRepository = appointmentRepository;
         }
 
+        /// <summary>
+        /// Get available time slots to doctor in date.
+        /// </summary>
+        /// <param name="idDoctor">Id doctor.</param>
+        /// <param name="date">Date to search.</param>
+        /// <returns>String with time slots.</returns>
         public async Task<IList<string>> GetAvailableTimesDoctor(int idDoctor, string date)
         {
             DateTime dateAppointment;
@@ -63,6 +101,12 @@
             }
         }
 
+        /// <summary>
+        /// Get assigned times by doctor in date.
+        /// </summary>
+        /// <param name="idDoctor">Id doctor.</param>
+        /// <param name="date">Date to search.</param>
+        /// <returns>List of assigned times by doctor.</returns>
         public async Task<IList<ResponseAppointmentsByDoctor>> GetAssignedTimeByDoctor(int idDoctor, string date)
         {
             DateTime dateAppointment;

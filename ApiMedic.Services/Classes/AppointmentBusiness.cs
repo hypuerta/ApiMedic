@@ -1,5 +1,6 @@
 ﻿// -------------------------------------------------------------------------------
-// <copyright file="AppointmentBusiness.cs">
+// <copyright file="AppointmentBusiness.cs" company="ApiMedic.Api">
+// ApiMedic.Api
 // </copyright>
 // <author>Herley Puerta</author>
 // <email>hypuerta@hotmail.com</email>
@@ -24,12 +25,23 @@ namespace ApiMedic.BusinessLogic.Classes
     /// </summary>
     public class AppointmentBusiness : IAppointmentBusiness
     {
+        /// <summary>
+        /// Appointment repository.
+        /// </summary>
         private readonly IAppointmentRepository appointmentRepository = null;
+
+        /// <summary>
+        /// Appointment adapter.
+        /// </summary>
         private readonly IDoctorAdapter doctorAdapter = null;
+
+        /// <summary>
+        /// Patient adapter.
+        /// </summary>
         private readonly IPatientAdapter patientAdapter = null;
 
         /// <summary>
-        /// Class Constructor.
+        /// Initializes a new instance of the AppointmentBusiness class.
         /// </summary>
         public AppointmentBusiness()
         {
@@ -38,6 +50,12 @@ namespace ApiMedic.BusinessLogic.Classes
             this.patientAdapter = new PatientAdapter();
         }
 
+        /// <summary>
+        /// Initializes a new instance of the AppointmentBusiness class.
+        /// </summary>
+        /// <param name="appointmentRepository">Repository appointment.</param>
+        /// <param name="doctorAdapter">Adapter doctor.</param>
+        /// <param name="patientAdapter">Adapter patient.</param>
         public AppointmentBusiness(
             IAppointmentRepository appointmentRepository,
             IDoctorAdapter doctorAdapter,
@@ -68,7 +86,7 @@ namespace ApiMedic.BusinessLogic.Classes
         /// <summary>
         /// Get list of Appointments.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>List of appointments.</returns>
         public async Task<IList<Appointment>> GetAppointments()
         {
             try
@@ -81,6 +99,11 @@ namespace ApiMedic.BusinessLogic.Classes
             }
         }
 
+        /// <summary>
+        /// Add appointment to database.
+        /// </summary>
+        /// <param name="appointment">Instance of appointment.</param>
+        /// <returns>1 is correct.</returns>
         public async Task<int> AddAppointment(Appointment appointment)
         {
             if (appointment == null)
@@ -109,6 +132,11 @@ namespace ApiMedic.BusinessLogic.Classes
             return await this.appointmentRepository.AddAppointment(appointment);
         }
 
+        /// <summary>
+        /// Update an appointment.
+        /// </summary>
+        /// <param name="appointment">Instance of appointment.</param>
+        /// <returns>1 is correct.</returns>
         public async Task<int> UpdateAppointment(Appointment appointment)
         {
             if (appointment == null)
@@ -139,6 +167,11 @@ namespace ApiMedic.BusinessLogic.Classes
             }
         }
 
+        /// <summary>
+        /// Set active to false to an appointment.
+        /// </summary>
+        /// <param name="idAppointment">Id appointment.</param>
+        /// <returns>1 is correct.</returns>
         public async Task<int> CancelAppointment(int idAppointment)
         {
             Appointment appointment = await this.appointmentRepository.GetAppointment(idAppointment);
@@ -153,6 +186,11 @@ namespace ApiMedic.BusinessLogic.Classes
             }
         }
 
+        /// <summary>
+        /// Delete an appointment from database.
+        /// </summary>
+        /// <param name="idAppointment">Id appointment to delete.</param>
+        /// <returns>1 is correct.</returns>
         public async Task<int> DeleteAppointment(int idAppointment)
         {
             Appointment appointment = await this.appointmentRepository.GetAppointment(idAppointment);

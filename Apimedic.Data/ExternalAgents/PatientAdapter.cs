@@ -1,4 +1,13 @@
-﻿namespace ApiMedic.Data.ExternalAgents
+﻿// -------------------------------------------------------------------------------
+// <copyright file="PatientAdapter.cs" company="ApiMedic.Api">
+// ApiMedic.Api
+// </copyright>
+// <author>Herley Puerta</author>
+// <email>hypuerta@hotmail.com</email>
+// <date>14/02/2018</date>
+// <summary>Implements Patient adapter.</summary>
+// -------------------------------------------------------------------------------
+namespace ApiMedic.Data.ExternalAgents
 {
     using System;
     using System.Collections.Generic;
@@ -9,8 +18,16 @@
     using Entities.Models;
     using Newtonsoft.Json;
 
-    public class PatientAdapter: AdapterBase, IPatientAdapter
+    /// <summary>
+    /// Implements Patient adapter.
+    /// </summary>
+    public class PatientAdapter : AdapterBase, IPatientAdapter
     {
+        /// <summary>
+        /// Get a patient by id.
+        /// </summary>
+        /// <param name="idPatient">Id patient.</param>
+        /// <returns>Instance of patient.</returns>
         public async Task<Patient> GetPatient(int idPatient)
         {
             Patient patient = new Patient();
@@ -24,6 +41,10 @@
             return patient;
         }
 
+        /// <summary>
+        /// Get list of patients.
+        /// </summary>
+        /// <returns>List of patients.</returns>
         public async Task<IEnumerable<Patient>> GetPatients()
         {
             IEnumerable<Patient> patients = new List<Patient>();

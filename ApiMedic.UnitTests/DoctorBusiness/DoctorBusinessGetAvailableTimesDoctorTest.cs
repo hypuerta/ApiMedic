@@ -1,4 +1,13 @@
-﻿namespace ApiMedic.UnitTests.AppointmentBusiness
+﻿// -------------------------------------------------------------------------------
+// <copyright file="DoctorBusinessGetAvailableTimesDoctorTest.cs" company="ApiMedic.Api">
+// ApiMedic.Api
+// </copyright>
+// <author>Herley Puerta</author>
+// <email>hypuerta@hotmail.com</email>
+// <date>13/02/2018</date>
+// <summary>Test Class DoctorBusinessGetAvailableTimesDoctorTest.</summary>
+// -------------------------------------------------------------------------------
+namespace ApiMedic.UnitTests.AppointmentBusiness
 {
     using System;
     using System.Collections.Generic;
@@ -9,14 +18,35 @@
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Moq;
 
+    /// <summary>
+    /// Test Class DoctorBusinessGetAvailableTimesDoctorTest.
+    /// </summary>
     [TestClass]
     public class DoctorBusinessGetAvailableTimesDoctorTest
     {
+        /// <summary>
+        /// Adapter doctor.
+        /// </summary>
         private Mock<IDoctorAdapter> doctorAdapter = null;
+
+        /// <summary>
+        /// Adapter patient.
+        /// </summary>
         private Mock<IPatientAdapter> patientAdapter = null;
+
+        /// <summary>
+        /// Repository appointment.
+        /// </summary>
         private Mock<IAppointmentRepository> appointmentRepository = null;
+
+        /// <summary>
+        /// Business doctor.
+        /// </summary>
         private IDoctorBusiness doctorBusiness = null;
 
+        /// <summary>
+        /// Initialize values to tests.
+        /// </summary>
         [TestInitialize]
         public void InitializeTest()
         {
@@ -29,6 +59,9 @@
                 this.appointmentRepository.Object);
         }
 
+        /// <summary>
+        /// Test get available times of doctor with error format date.
+        /// </summary>
         [ExpectedException(typeof(AggregateException))]
         [TestMethod]
         public void GetAvailableTimesDoctorErrorFormatDate()
@@ -37,6 +70,9 @@
             Assert.AreEqual(null, result);
         }
 
+        /// <summary>
+        /// Test get available times doctor without appointments.
+        /// </summary>
         [TestMethod]
         public void GetAvailableTimesDoctorWithoutAppointments()
         {
@@ -47,6 +83,9 @@
             Assert.AreEqual("00:00 - 23:59", result[0]);
         }
 
+        /// <summary>
+        /// Test get available times doctor without appointments.
+        /// </summary>
         [TestMethod]
         public void GetAvailableTimesDoctorWithAppointments()
         {
