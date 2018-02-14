@@ -1,12 +1,13 @@
 ﻿namespace ApiMedic.Entities.Interfaces
 {
     using System.Collections.Generic;
+    using System.Threading.Tasks;
     using Models;
 
     public interface IPatientAdapter
     {
-        Patient GetPatient(int idPatient);
+        Task<Patient> GetPatient(int idPatient);
 
-        IEnumerable<Patient> GetPatients();
+        Task<IEnumerable<Patient>> GetPatients();
     }
 }

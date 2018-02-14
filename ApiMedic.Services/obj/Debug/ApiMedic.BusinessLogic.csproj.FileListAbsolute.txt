@@ -12,3 +12,5 @@ C:\Users\hpuerta\documents\visual studio 2017\Projects\ApiMedic\ApiMedic.Service
 C:\Users\hpuerta\documents\visual studio 2017\Projects\ApiMedic\ApiMedic.Services\obj\Debug\ApiMedic.BusinessLogic.csprojResolveAssemblyReference.cache
 C:\Users\hpuerta\documents\visual studio 2017\Projects\ApiMedic\ApiMedic.Services\obj\Debug\ApiMedic.BusinessLogic.dll
 C:\Users\hpuerta\documents\visual studio 2017\Projects\ApiMedic\ApiMedic.Services\obj\Debug\ApiMedic.BusinessLogic.pdb
+C:\Users\hpuerta\Documents\Visual Studio 2017\Projects\ApiMedic\ApiMedic.Services\bin\Debug\ApiMedic.Utilities.dll
+C:\Users\hpuerta\Documents\Visual Studio 2017\Projects\ApiMedic\ApiMedic.Services\bin\Debug\ApiMedic.Utilities.pdb

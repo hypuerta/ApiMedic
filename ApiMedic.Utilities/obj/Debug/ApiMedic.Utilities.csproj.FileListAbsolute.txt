@@ -1,0 +1,7 @@
+C:\Users\hpuerta\Documents\Visual Studio 2017\Projects\ApiMedic\ApiMedic.Utilities\bin\Debug\ApiMedic.Utilities.dll
+C:\Users\hpuerta\Documents\Visual Studio 2017\Projects\ApiMedic\ApiMedic.Utilities\bin\Debug\ApiMedic.Utilities.pdb
+C:\Users\hpuerta\Documents\Visual Studio 2017\Projects\ApiMedic\ApiMedic.Utilities\obj\Debug\ApiMedic.Utilities.dll
+C:\Users\hpuerta\Documents\Visual Studio 2017\Projects\ApiMedic\ApiMedic.Utilities\obj\Debug\ApiMedic.Utilities.pdb
+C:\Users\hpuerta\Documents\Visual Studio 2017\Projects\ApiMedic\ApiMedic.Utilities\obj\Debug\ApiMedic.Utilities.csprojResolveAssemblyReference.cache
+C:\Users\hpuerta\Documents\Visual Studio 2017\Projects\ApiMedic\ApiMedic.Utilities\obj\Debug\ApiMedic.Utilities.Resources.ApiMedicMessages.resources
+C:\Users\hpuerta\Documents\Visual Studio 2017\Projects\ApiMedic\ApiMedic.Utilities\obj\Debug\ApiMedic.Utilities.csproj.GenerateResource.Cache

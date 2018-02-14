@@ -82,3 +82,5 @@ C:\Users\hpuerta\documents\visual studio 2017\Projects\ApiMedic\ApiMedic.Api\bin
 C:\Users\hpuerta\documents\visual studio 2017\Projects\ApiMedic\ApiMedic.Api\obj\Debug\ApiMedic.Api.csprojResolveAssemblyReference.cache
 C:\Users\hpuerta\documents\visual studio 2017\Projects\ApiMedic\ApiMedic.Api\obj\Debug\ApiMedic.Api.dll
 C:\Users\hpuerta\documents\visual studio 2017\Projects\ApiMedic\ApiMedic.Api\obj\Debug\ApiMedic.Api.pdb
+C:\Users\hpuerta\Documents\Visual Studio 2017\Projects\ApiMedic\ApiMedic.Api\bin\ApiMedic.Utilities.dll
+C:\Users\hpuerta\Documents\Visual Studio 2017\Projects\ApiMedic\ApiMedic.Api\bin\ApiMedic.Utilities.pdb

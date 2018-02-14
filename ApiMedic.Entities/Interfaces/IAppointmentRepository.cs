@@ -2,19 +2,23 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
+    using System.Threading.Tasks;
     using Models;
 
     public interface IAppointmentRepository
     {
-        int AddAppointment(Appointment appointment);
+        Task<int> AddAppointment(Appointment appointment);
 
-        int UpdateAppointment(Appointment appointment);
+        Task<int> UpdateAppointment(Appointment appointment);
 
-        Appointment GetAppointment(int id);
+        Task<Appointment> GetAppointment(int id);
 
-        IQueryable<Appointment> GetAppointments();
+        Task<IList<Appointment>> GetAppointments();
 
-        IList<Appointment> GetAppointmentsByDoctor(int idDoctor, DateTime date);
+        Task<IList<Appointment>> GetAppointmentsByDoctor(int idDoctor, DateTime date);
+
+        Task<IList<Appointment>> GetAppointmentsInDateByDoctor(Appointment appointment);
+
+        Task<int> DeleteAppointment(Appointment appointment);
     }
 }

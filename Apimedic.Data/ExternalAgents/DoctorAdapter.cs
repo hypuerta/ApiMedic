@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Configuration;
+    using System.Net.Http;
     using System.Threading.Tasks;
     using Entities.Interfaces;
     using Entities.Models;
@@ -10,29 +11,27 @@
 
     public class DoctorAdapter : AdapterBase, IDoctorAdapter
     {
-        public Doctor GetDoctor(int idDoctor)
+        public async Task<Doctor> GetDoctor(int idDoctor)
         {
             Doctor doctor = new Doctor();
             this.Url = new Uri(string.Format("{0}/{1}", ConfigurationManager.AppSettings["UrlDoctor"], idDoctor));
-            var httpResponse = Task.Run(() => this.ExecuteGet());
-            httpResponse.Wait();
-            if (httpResponse.Result.IsSuccessStatusCode)
+            HttpResponseMessage httpResponse = await this.ExecuteGet();
+            if (httpResponse.IsSuccessStatusCode)
             {
-                doctor = JsonConvert.DeserializeObject<Doctor>(httpResponse.Result.Content.ReadAsStringAsync().Result);
+                doctor = JsonConvert.DeserializeObject<Doctor>(httpResponse.Content.ReadAsStringAsync().Result);
             }
 
             return doctor;
         }
 
-        public IEnumerable<Doctor> GetDoctors()
+        public async Task<IEnumerable<Doctor>> GetDoctors()
         {
             IEnumerable<Doctor> doctors = new List<Doctor>();
             this.Url = new Uri(string.Format("{0}", ConfigurationManager.AppSettings["UrlDoctor"]));
-            var httpResponse = Task.Run(() => this.ExecuteGet());
-            httpResponse.Wait();
-            if (httpResponse.Result.IsSuccessStatusCode)
+            HttpResponseMessage httpResponse = await this.ExecuteGet();
+            if (httpResponse.IsSuccessStatusCode)
             {
-                doctors = JsonConvert.DeserializeObject<IEnumerable<Doctor>>(httpResponse.Result.Content.ReadAsStringAsync().Result);
+                doctors = JsonConvert.DeserializeObject<IEnumerable<Doctor>>(httpResponse.Content.ReadAsStringAsync().Result);
             }
 
             return doctors;

@@ -1,45 +1,66 @@
 ﻿namespace ApiMedic.Data.Repositories
 {
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Linq;
-    using Api.Models;
+    using System.Threading.Tasks;
+    using Data.Context;
     using Entities.Interfaces;
     using Entities.Models;
-    using System.Collections.Generic;
 
     public class AppointmentRepository : IAppointmentRepository, IDisposable
     {
         private bool disposed = false;
         private readonly ApiMedicDB dataBase = new ApiMedicDB();
 
-        public int AddAppointment(Appointment appointment)
+        public async Task<int> AddAppointment(Appointment appointment)
         {
             this.dataBase.Appointments.Add(appointment);
-            return this.dataBase.SaveChanges();
+            return await this.dataBase.SaveChangesAsync();
         }
 
-        public int UpdateAppointment(Appointment appointment)
+        public async Task<int> UpdateAppointment(Appointment appointment)
         {
-            this.dataBase.Entry(appointment).State = EntityState.Modified;
-            return this.dataBase.SaveChanges();
+            Appointment appointmentNew = this.dataBase.Appointments.Find(appointment.IdAppointment);
+            appointmentNew.IdDoctor = appointment.IdDoctor;
+            appointmentNew.IdPatient = appointment.IdPatient;
+            appointmentNew.StartDate = appointment.StartDate;
+            appointmentNew.EndDate = appointment.EndDate;
+            appointmentNew.Active = appointment.Active;
+            this.dataBase.Entry(appointmentNew).State = EntityState.Modified;
+            return await this.dataBase.SaveChangesAsync();
         }
 
-        public IQueryable<Appointment> GetAppointments()
+        public async Task<IList<Appointment>> GetAppointments()
         {
-            return this.dataBase.Appointments;
+            return await this.dataBase.Appointments.ToListAsync();
         }
 
-        public IList<Appointment> GetAppointmentsByDoctor(int idDoctor, DateTime date)
+        public async Task<IList<Appointment>> GetAppointmentsByDoctor(int idDoctor, DateTime date)
         {
-            return this.dataBase.Appointments.Where(a => a.IdDoctor == idDoctor &&
+            return await this.dataBase.Appointments.Where(a => a.IdDoctor == idDoctor &&
                 DbFunctions.TruncateTime(a.StartDate) == date &&
-                a.Active == true).OrderBy(a => a.StartDate).ToList();
+                a.Active == true).OrderBy(a => a.StartDate).ToListAsync();
         }
 
-        public Appointment GetAppointment(int id)
+        public async Task<Appointment> GetAppointment(int id)
         {
-            return this.dataBase.Appointments.Find(id);
+            return await this.dataBase.Appointments.FindAsync(id);
+        }
+
+        public async Task<IList<Appointment>> GetAppointmentsInDateByDoctor(Appointment appointment)
+        {
+            return await this.dataBase.Appointments.Where(a => a.IdDoctor == appointment.IdDoctor &&
+                (a.StartDate <= appointment.StartDate && a.EndDate >= appointment.StartDate) || 
+                (a.StartDate <= appointment.EndDate && a.EndDate >= appointment.EndDate)).ToListAsync();
+        }
+
+        public async Task<int> DeleteAppointment(Appointment appointment)
+        {
+            Appointment appointmentNew = this.dataBase.Appointments.Find(appointment.IdAppointment);
+            this.dataBase.Appointments.Remove(appointmentNew);
+            return await this.dataBase.SaveChangesAsync();
         }
 
         public void Dispose()

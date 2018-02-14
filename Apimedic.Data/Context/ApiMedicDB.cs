@@ -1,7 +1,7 @@
-﻿namespace ApiMedic.Api.Models
+﻿namespace ApiMedic.Data.Context
 {
-    using Entities.Models;
     using System.Data.Entity;
+    using Entities.Models;
 
     public class ApiMedicDB : DbContext
     {

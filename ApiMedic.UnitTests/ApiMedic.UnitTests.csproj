@@ -32,13 +32,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.2.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Moq, Version=4.8.0.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\packages\Moq.4.8.1\lib\net45\Moq.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.3.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.Extensions" />
@@ -90,9 +102,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppointmentBusiness\AppointmentBusinessDeleteAppointmentTest.cs" />
+    <Compile Include="AppointmentBusiness\AppointmentBusinessUpdateAppointmentTest.cs" />
+    <Compile Include="AppointmentBusiness\AppointmentBusinessCancelAppointmentTest.cs" />
+    <Compile Include="AppointmentBusiness\AppointmentBusinessAddAppointmentTest.cs" />
+    <Compile Include="AppointmentBusiness\AppointmentBusinessGetAppointmentsTest.cs" />
+    <Compile Include="AppointmentBusiness\AppointmentBusinessGetAppointmentTest.cs" />
+    <Compile Include="DoctorBusiness\DoctorBusinessGetAssignedTimeByDoctorTest.cs" />
+    <Compile Include="DoctorBusiness\DoctorBusinessGetAvailableTimesDoctorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Controllers\HomeControllerTest.cs" />
-    <Compile Include="Controllers\ValuesControllerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />
@@ -105,7 +123,20 @@
       <Project>{CA31C0B0-76C1-4570-90CD-709594550ECA}</Project>
       <Name>ApiMedic.Api</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ApiMedic.Entities\ApiMedic.Entities.csproj">
+      <Project>{B5C81E7B-AAD0-4E83-91F9-F70BAD290AD9}</Project>
+      <Name>ApiMedic.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ApiMedic.Services\ApiMedic.BusinessLogic.csproj">
+      <Project>{BF1EED05-F1A7-4F3D-A8D7-8505198DD198}</Project>
+      <Name>ApiMedic.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ApiMedic.Utilities\ApiMedic.Utilities.csproj">
+      <Project>{DFDC9F39-3054-4517-A219-BDEEB38FBA88}</Project>
+      <Name>ApiMedic.Utilities</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

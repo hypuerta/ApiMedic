@@ -1,51 +1,53 @@
 ﻿namespace ApiMedic.Api.Controllers
 {
+    using System.Net;
+    using System.Threading.Tasks;
     using System.Web.Http;
-    using BusinessLogic;
+    using BusinessLogic.Classes;
     using Entities.Models;
 
     public class AppointmentController : ApiController
     {
         [Route("api/appointment/{id:int}")]
         [HttpGet]
-        public IHttpActionResult Appointment(int id)
+        public async Task<IHttpActionResult> Appointment(int id)
         {
-            return Ok(new AppointmentBL().GetAppointment(id));
+            return Content(HttpStatusCode.OK, await new AppointmentBusiness().GetAppointment(id));
         }
 
         [Route("api/appointment")]
         [HttpGet]
-        public IHttpActionResult Appointment()
+        public async Task<IHttpActionResult> Appointment()
         {
-            return Ok(new AppointmentBL().GetAppointments());
+            return Content(HttpStatusCode.OK, await new AppointmentBusiness().GetAppointments());
         }
 
         [Route("api/appointment")]
         [HttpPost]
-        public IHttpActionResult Appointment(Appointment appointment)
+        public async Task<IHttpActionResult> Appointment(Appointment appointment)
         {
-            return Ok(new AppointmentBL().AddAppointment(appointment));
+            return Content(HttpStatusCode.OK, await new AppointmentBusiness().AddAppointment(appointment));
         }
 
-        [Route("api/appointment/cancel")]
+        [Route("api/appointment/cancel/{id:int}")]
         [HttpPost]
-        public IHttpActionResult CancelAppointment(int idAppointment)
+        public async Task<IHttpActionResult> CancelAppointment(int id)
         {
-            return Ok(new AppointmentBL().CancelAppointment(idAppointment));
+            return Content(HttpStatusCode.OK, await new AppointmentBusiness().CancelAppointment(id));
         }
 
         [Route("api/appointment/update")]
         [HttpPost]
-        public IHttpActionResult UpdateAppointment(Appointment appointment)
+        public async Task<IHttpActionResult> UpdateAppointment(Appointment appointment)
         {
-            return Ok(new AppointmentBL().UpdateAppointment(appointment));
+            return Content(HttpStatusCode.OK, await new AppointmentBusiness().UpdateAppointment(appointment));
         }
 
-        [Route("api/appointment/getAppointment/{idDoctor}/{date}")]
-        [HttpGet]
-        public IHttpActionResult AppointmentsByDoctor(int idDoctor, string date)
+        [Route("api/appointment/{id:int}")]
+        [HttpDelete]
+        public async Task<IHttpActionResult> DeleteAppointment(int id)
         {
-            return Ok(new AppointmentBL().GetAppointmentsByDoctorAsync(idDoctor, date));
+            return Content(HttpStatusCode.OK, await new AppointmentBusiness().DeleteAppointment(id));
         }
     }
 }
